@@ -7,6 +7,12 @@ const nextConfig = {
     })
     return config
   },
+  // Exclude scripts folder from build
+  experimental: {
+    outputFileTracingExcludes: {
+      '*': ['./scripts/**/*'],
+    },
+  },
   async headers() {
     return [
       {

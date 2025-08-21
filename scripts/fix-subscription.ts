@@ -30,7 +30,7 @@ const main = async () => {
     // 2. Check database subscriptions
     console.log("\n2️⃣ Checking database subscriptions...");
     const dbSubscriptions = await db.query.userSubscription.findMany();
-    console.log(`Found ${dbSubscriptions.data.length} database subscription records`);
+    console.log(`Found ${dbSubscriptions.length} database subscription records`);
 
     // 3. Sync missing subscriptions
     console.log("\n3️⃣ Syncing missing subscriptions...");
